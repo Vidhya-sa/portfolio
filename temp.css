@@ -1,0 +1,74 @@
+/* Style the body and center the form */
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://img.freepik.com/premium-photo/weather-thermometer-sand-against-sky-showing-high-ambient-temperature_98862-1683.jpg?w=360"); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background:transparent;
+    border-radius: 30px;
+    padding: 45px; /* Adjust the padding as needed */
+    width: 300px; /* Adjust the width as needed */
+    text-align: center;
+}
+
+/* Style the heading */
+h1 {
+    color: #0f0f0f;
+    font-size: 24px;
+}
+
+/* Style the input fields and buttons */
+label {
+    display: block;
+    margin: 15px ;
+    text-align: center;
+    color: #333;
+}
+
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #f5f0f0d5;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type="button"] {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #0074cc;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+
+input[type="button"]:hover {
+    background-color: #0052a6;
+}
+
+/* Add some spacing between input fields and buttons */
+br {
+    margin: 5px 0;
+}
+/* Style the unit (degree symbol) */
+/* .unit::after {
+    right:45%;
+     
+} */

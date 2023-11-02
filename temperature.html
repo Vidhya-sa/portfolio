@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="temp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    <form>
+        <div class="img">
+        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9_D5UI5ZP6J7XYsYLQW54G7Llk8bguTQ_QEDb1euQ&s" width="100%" height="100%"> -->
+    </div>
+        
+        <h1>Temperature Converter
+            <i class="fas fa-thermometer-full"></i> 
+        </h1>    
+        <input type="number" id="celsius" placeholder="Celsius" required>
+        <span class="unit">°C</span>
+        <br>     
+        <input type="number" id="fahrenheit" placeholder="Fahrenheit" readonly>
+        <span class="unit">°F</span>
+        <br>
+        <input type="number" id="kelvin" placeholder="Kelvin" readonly>
+        <span class="unit">°K</span>
+        <br>
+        <input type="button" id="convertButton" value="Convert">
+        <input type="button" id="clearButton" value="Clear">
+    </form>
+
+    <script>
+        // Add JavaScript code here to perform the temperature conversion
+        const celsiusInput = document.getElementById("celsius");
+        const fahrenheitInput = document.getElementById("fahrenheit");
+        const kelvinInput = document.getElementById("kelvin");
+        const convertButton = document.getElementById("convertButton");
+        const clearButton = document.getElementById("clearButton");
+
+        convertButton.addEventListener("click", function() {
+            // Get the value in Celsius
+            const celsiusValue = parseFloat(celsiusInput.value);
+
+            // Perform the conversion
+            const fahrenheitValue = (celsiusValue * 9/5) + 32;
+            const kelvinValue = celsiusValue + 273.15;
+
+            // Display the converted values
+            fahrenheitInput.value = fahrenheitValue.toFixed(2);
+            kelvinInput.value = kelvinValue.toFixed(2);
+        });
+
+        clearButton.addEventListener("click", function() {
+            // Clear all input fields
+            celsiusInput.value = "";
+            fahrenheitInput.value = "";
+            kelvinInput.value = "";
+        });
+    </script>
+</body>
+</html>
